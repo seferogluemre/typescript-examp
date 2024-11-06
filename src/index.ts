@@ -24,7 +24,7 @@
 // const square=(num: number)=>{
 //     return num*5;
 // }
-// // console.log(square("Emre"))
+// console.log(square("Emre"))
 // console.log(square(12));
 // console.log(square(4.67))
 
