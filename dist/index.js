@@ -33,21 +33,21 @@ namesAndNumbers[2] = renameName;
 console.log("İsim Degiştirildi", namesAndNumbers);
 // Example 4 ---------------- Object
 let user = {
-    firstName: "Emre",
-    lastName: "Seferoğlu",
-    age: 16,
-    birthDate: new Date(2008, 3, 22),
+  firstName: "Emre",
+  lastName: "Seferoğlu",
+  age: 16,
+  birthDate: new Date(2008, 3, 22),
 };
 console.log(user.birthDate);
 user.firstName = "Ahmet";
-// user.firstName=1;!!! 
+// user.firstName=1;!!!
 user.birthDate = new Date(2008, 2, 4);
 console.log(user.birthDate);
 user = {
-    lastName: "Seferoğlu",
-    age: 16,
-    birthDate: new Date(2008, 3, 22),
-    firstName: "Ahmet",
+  lastName: "Seferoğlu",
+  age: 16,
+  birthDate: new Date(2008, 3, 22),
+  firstName: "Ahmet",
 };
 // Example 5 ---------------- Explicit Types
 let firstName;

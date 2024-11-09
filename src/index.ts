@@ -24,7 +24,7 @@
 // const square=(num: number)=>{
 //     return num*5;
 // }
-// // console.log(square("Emre"))
+// console.log(square("Emre"))
 // console.log(square(12));
 // console.log(square(4.67))
 
@@ -159,12 +159,36 @@ let greet=()=>{
 // sum(12,5,12);
 
 
-
 const sum=(num1:number,num2:number):number=>{
     return num1+num2
 }
+let result=sum(12,5)
 
-let result=sum(12,5);
+
+
+
+// Type Aliases -----------------------------------
+
+
+// Aslında Referans alma işlemine benzer tekrarlamayı önler ve sadece type'ları birkere tanımlar istedigimiz yerde istedigimiz kadar kullanırız
+
+type StringOrNumber=string|number;
+
+
+type User={
+    id:StringOrNumber,firstName:string,lastName:string
+}
+const showUserInfo=(id:StringOrNumber,userName:string)=>{
+    console.log(`${userName} kullanıcısının Id'si şudur ${id}`)
+}
+
+const sendWelcmMessage=(user:User)=>{
+    console.log(`Hoşgeldin ${user.firstName} ${user.lastName}!`)
+}
+
+const sendGoodBye=(user:User)=>{
+    console.log(`Tekrar bekleriz,${firstName}`)
+}
 
 
 
