@@ -49,5 +49,20 @@ user = {
     birthDate: new Date(2008, 3, 22),
     firstName: "Ahmet",
 };
+// Example 5 ---------------- Explicit Types
+let firstName;
+let age;
+let isBanned;
+// age="emre";
+age = 12;
+// age=true;
+// isBanned="aktif";
+isBanned = true;
+firstName = "emre";
+// firstName=12;
+let users = [];
+// users.push(12);
+users.push("emre");
+console.log(users);
 export {};
 //# sourceMappingURL=index.js.map
