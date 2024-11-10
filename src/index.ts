@@ -166,15 +166,12 @@ let result=sum(12,5)
 
 
 
-
 // Type Aliases -----------------------------------
 
 
 // Aslında Referans alma işlemine benzer tekrarlamayı önler ve sadece type'ları birkere tanımlar istedigimiz yerde istedigimiz kadar kullanırız
 
 type StringOrNumber=string|number;
-
-
 type User={
     id:StringOrNumber,firstName:string,lastName:string
 }
@@ -190,13 +187,25 @@ const sendGoodBye=(user:User)=>{
     console.log(`Tekrar bekleriz,${firstName}`)
 }
 
+// TYPE CASTİNG ----------------------------------------
 
+const linkEl=document.querySelector("a")!;
+console.log(linkEl)
 
+// formda htmlformelement gözüküyor sebepi zaten direk bir html elemanını aldıgımız için bunun htmlformElement oldugunu anladı ve üzerine geldigimizde öyle yazdı
+const form=document.querySelector("form");
 
+// Burda ise direk Element olarak gözükmesininin sebebi class ile belirttigimiz için ve bu class her Elementte olabilecegi için Element yazmış oldu Genel elemanları gördügü içinde kaynaklanıyor
 
+// const formFromClass=document.querySelector(".signup-form") as HTMLFormElement;
 
+// Üsste ise as htmlformelemnt deme sebebimiz aslında sol kısımda sen onu yanlış biliyorsun dogrusu bu gibisinden düşünebiliriz 
+// 
 
+// Burda Varsayalımki herhangi kısımda string oldugundan eminsek ve alttaki gibi hata veriyorsa şunu yapıcaz
+// const formFromClass=document.querySelector(".signup-form") as string; Conversion of type 'Element' to type 'string' may be a mistake because neither type sufficiently overlaps with the other Böyle bi hata ile karşılaşırız burda ilk başta unknown yani bilinmiyor diye belirtip daha string ataması yapabiliriz
 
+const formFromClass=document.querySelector(".signup-form") as unknown as string;
 
 
 
